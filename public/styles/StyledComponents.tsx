@@ -59,3 +59,28 @@ export const Slider = styled.input`
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.5);
   }
 `
+
+export const VelocityInput = styled.input`
+	width: 126.55px;
+	height: 60.11px;
+	margin-left: 46px;
+	margin-right: 16.2px;
+	font-size: 47.99px;
+	line-height: 56.24px;
+	border: 1px solid black;
+	border-radius: 20px;
+	outline: none;
+	text-align: center;
+	font-family: Roboto, sans-serif;
+`
+export const ButtonContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	column-gap: 21.17px;
+	margin-top: 15.82px;
+`
+
+export const PlusMinusBtn = styled.button`
+	background: none;
+	cursor: pointer;
+`

@@ -1,15 +1,18 @@
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import {SettingBlock} from "./SettingBlock";
 import SettingsContext from "../context/SettingsContext";
 
-export const WordsCountContainer: React.FC = (props) => {
+export const LettersCount: React.FC = () => {
 
 	const {state} = useContext(SettingsContext)
 
-	const scale = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-	const title = "Сколько слов"
+	const scale = []
+	for (let i=3; i<=16; i++) {
+		scale.push(i)
+	}
+	const title = "Сколько букв"
 
 	return (
-		<SettingBlock scale={scale} title={title} type="wordsCount" value={state.wordsCount}/>
+		<SettingBlock scale={scale} title={title} type="lettersCount" value={state.lettersCount}/>
 	)
 }
