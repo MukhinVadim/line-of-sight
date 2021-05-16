@@ -52,7 +52,7 @@ const Game = () => {
 	const splitedWord = [firstPart, secondPart]
 
 	useEffect(() => {
-		if (localState.count < state.wordsCount) {
+		if (localState.count <= state.wordsCount) {
 			setTimeout(() => {
 				const randomWord = filteredWords[Math.floor(Math.random() * filteredWords.length)]
 				setlocalState({
@@ -63,13 +63,13 @@ const Game = () => {
 			}, state.velocity * 1000)
 			clearTimeout()
 		}
-	}, [localState.word])
+	}, [localState.count])
 
 	return (
 		<MainLayout>
 			<Header/>
 			<Wrapper startDistance={`${localState.distance}`}>
-				{localState.count < state.wordsCount ?
+				{localState.count <= state.wordsCount ?
 					<>
 					<span>{splitedWord[0]}</span>
 					<svg width="88" height="38" viewBox="0 0 88 38" fill="none" xmlns="http://www.w3.org/2000/svg">
