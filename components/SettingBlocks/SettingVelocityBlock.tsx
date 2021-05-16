@@ -23,7 +23,7 @@ export const SettingVelocityBlock: React.FC = () => {
 		<Box>
 			<Wrapper>
 				<Title>Скорость
-					<VelocityInput type="text" defaultValue={state.velocity} />сек.
+					<VelocityInput type="text" value={state.velocity} onChange={() => null}/>сек.
 					<ButtonContainer>
 						<PlusMinusBtn onClick={decrement}>
 							<svg width="93" height="93" viewBox="0 0 93 93" fill="white" xmlns="http://www.w3.org/2000/svg">

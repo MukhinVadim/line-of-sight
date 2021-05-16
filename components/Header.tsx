@@ -1,5 +1,4 @@
 import Image from "next/image";
-import logo from "../public/logo.png";
 import styled from "@emotion/styled";
 
 const ImageContainer = styled.div`
@@ -16,7 +15,7 @@ export const Header = ({children}: any) => {
 	return (
 		<ImageContainer>
 			<Image
-				src={logo}
+				src="/logo.png"
 				alt="Logo"
 				width={337.75}
 				height={134.71}
